@@ -20,12 +20,13 @@ import { VerObrasComponent } from './components/ver-obras/ver-obras.component';
     VerObrasComponent
   ],
   imports: [
-    CommonModule
-  ],
-  exports:[
+    CommonModule,
     AutoresRoutingModule,
     MaterialModule,
     FormsModule,
+  ],
+  exports:[
+    
   ]
 })
 export class AutoresModule { }

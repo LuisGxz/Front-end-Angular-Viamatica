@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ListaAutoresComponent } from './pages/lista-autores/lista-autores.component';
-import { LoginComponent } from '../auth/login/login.component';
 import { ObrasFavoritasComponent } from './pages/obras-favoritas/obras-favoritas.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes =[
   {
@@ -19,7 +19,14 @@ const routes: Routes =[
         path: 'login',
         component: LoginComponent
       },
-      
+      {
+        path: 'favoritos',
+        component: ObrasFavoritasComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'listado'
+      }
     ]
   }
 ]
@@ -27,7 +34,10 @@ const routes: Routes =[
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    RouterModule.forChild(routes)
+  ],
+  exports:[
+    RouterModule
   ]
 })
 export class AutoresRoutingModule { }

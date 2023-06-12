@@ -1,0 +1,32 @@
+.toolbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.toolbar-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    font-size: 15px;
+}
+.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  .button-option{
+    margin-left: 50px;
+  }

@@ -1,1 +1,33 @@
-<p>home works!</p>
+<mat-toolbar class="toolbar-container">
+    <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span >AutorTeca</span>
+        <button class="button-option" mat-button [routerLink]="['/autores/listado']">
+            <mat-icon>face</mat-icon>
+            Autores
+        </button>
+        <button class="button-option" mat-button [routerLink]="['/autores/login']">
+            <mat-icon>book</mat-icon>
+            Obras Favoritas
+        </button>
+    </div>
+    <div class="toolbar-item">
+        <div >
+            <button mat-button [routerLink]="['/autores/login']">
+                <mat-icon>login</mat-icon>
+                Iniciar Sesion
+            </button>
+        </div>
+        <div>
+            <button mat-button>
+                <mat-icon>logout</mat-icon>
+                Cerrar Sesion
+            </button>
+        </div>
+        
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+mat-card {
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #212121;
+    max-width: 600px;
+    padding: 50px;
+    margin: 2em auto;
+    text-align: center;
+    color: white;
+}
+
+mat-form-field {
+    display: block;
+}

@@ -1,1 +1,24 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-content>
+        <form autocomplete="off">
+            <h2>Iniciar Sesión</h2>
+            <mat-form-field>
+                <input matInput placeholder="Usuario" name="username" required [(ngModel)]="usuario">
+                <mat-error>
+                    Por favor, ingresa un usuario válido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Contraseña" name="password" required
+                    [(ngModel)]="password">
+                <mat-error>
+                    Por favor, ingresa una contraseña válida
+                </mat-error>
+            </mat-form-field>
+            <mat-error *ngIf="!loginValid">
+                Usuario o contraseña incorrectos
+            </mat-error>
+            <button mat-raised-button color="primary" (click)="login()">Iniciar Sesión</button>
+        </form>
+    </mat-card-content>
+</mat-card>
