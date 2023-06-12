@@ -4,13 +4,27 @@
 <h2 mat-dialog-title>Obras del autor</h2>
 <mat-dialog-content class="mat-typography">
     <mat-card>
-        <h2> {{autor}} </h2>
+        <h2>Autor:  {{autor}} </h2>
         <ul>
             <li *ngFor="let obra of obras;">
+                Titulo: 
                 {{obra.title}}
-                <button mat-button>Agregar a favoritos</button>
+                <button class="favoritos-autor" mat-button (click)="agregarFavorito(autor, obra.title)">Agregar a favoritos</button>
             </li>
             
         </ul>
     </mat-card>
+    
+    <div class="obras-randon-container">
+        <h2>Obras random</h2>
+        <div class="grid-random">
+            <mat-card class="card-random" *ngFor="let obra of obrasRandom">
+                <h2>Autor:  {{obra.author}} </h2>
+                <p>Title: {{obra.title}}</p>
+                <button class="favoritos-random" mat-button (click)="agregarFavorito(obra.author, obra.title)">Agregar a favoritos</button>
+                
+            </mat-card>
+        </div>
+        
+    </div>
 </mat-dialog-content>

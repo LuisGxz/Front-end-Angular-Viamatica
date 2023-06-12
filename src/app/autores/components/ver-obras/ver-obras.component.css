@@ -1,3 +1,20 @@
 html{
     background-color: white;
 }
+.obras-randon-container{
+    margin-top: 20px;
+}
+.card-random{
+    background-color: rgb(205, 204, 204);
+    color: #212121;
+    padding: 10px;
+}
+.grid-random{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.favoritos-random{
+    background: #212121;
+    
+}
