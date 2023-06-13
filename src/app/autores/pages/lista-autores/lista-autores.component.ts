@@ -11,7 +11,7 @@ import { VerObrasComponent } from '../../components/ver-obras/ver-obras.componen
 })
 export class ListaAutoresComponent implements OnInit {
 
-  autores: string[] = [];
+  autores!: string[];
   
 
   constructor(private autoresService: AutoresService, public dialog: MatDialog) { }

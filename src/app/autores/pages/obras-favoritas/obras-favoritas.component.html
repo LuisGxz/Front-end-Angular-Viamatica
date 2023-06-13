@@ -1,13 +1,17 @@
-<div class="tabla-container">
+<div class="spinner" *ngIf="!obrasFavoritas; else divObras">
+  <mat-spinner></mat-spinner>
+</div>
+<ng-template #divObras>
+  <div class="tabla-container">
     <h2>Lista de Obras favoritas</h2>
-    <h3 >Numero de favoritos en total: {{obrasFavoritas.length}}</h3>
-    <table  mat-table [dataSource]="obrasFavoritas" class="mat-elevation-z8">
+    <h3>Numero de favoritos en total: {{obrasFavoritas.length}}</h3>
+    <table mat-table [dataSource]="obrasFavoritas" class="mat-elevation-z8">
       <!-- Columna de autores -->
       <ng-container matColumnDef="author">
         <th mat-header-cell *matHeaderCellDef>Autores: </th>
         <td mat-cell *matCellDef="let obra">{{ obra.author }}</td>
       </ng-container>
-  
+
       <!-- Columna de Ver obras -->
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef>Título de Obra: </th>
@@ -17,12 +21,13 @@
       <!-- Columna de eliminar obra  -->
       <ng-container matColumnDef="eliminar">
         <th mat-header-cell *matHeaderCellDef>Eliminar: </th>
-        <td mat-cell *matCellDef="let obra"> <button mat-button (click)="eliminarFavorito(obra.title)">Eliminar de favoritos</button></td>
+        <td mat-cell *matCellDef="let obra"> <button mat-button (click)="eliminarFavorito(obra.title)">Eliminar de
+            favoritos</button></td>
       </ng-container>
-  
+
       <!-- Definir las columnas que deseas mostrar -->
       <tr mat-header-row *matHeaderRowDef="['author', 'title', 'eliminar']"></tr>
       <tr mat-row *matRowDef="let row; columns: ['author', 'title', 'eliminar']"></tr>
     </table>
   </div>
-  
+</ng-template>
