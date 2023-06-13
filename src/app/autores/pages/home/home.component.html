@@ -4,24 +4,24 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span >AutorTeca</span>
-        <button class="button-option" mat-button [routerLink]="['/autores/listado']">
+        <button class="button-option" mat-button routerLink="/autores/listado">
             <mat-icon>face</mat-icon>
             Autores
         </button>
-        <button class="button-option" mat-button [routerLink]="['/autores/favoritos']">
+        <button class="button-option" mat-button routerLink="/autores/favoritos">
             <mat-icon>book</mat-icon>
             Obras Favoritas
         </button>
     </div>
     <div class="toolbar-item">
         <div >
-            <button mat-button [routerLink]="['/autores/login']">
+            <button mat-button [routerLink]="['/autores/login']" >
                 <mat-icon>login</mat-icon>
                 Iniciar Sesion
             </button>
         </div>
         <div>
-            <button mat-button>
+            <button mat-button [routerLink]="['/autores/login']" (click)="logOut()">
                 <mat-icon>logout</mat-icon>
                 Cerrar Sesion
             </button>

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ListaAutoresComponent } from './pages/lista-autores/lista-autores.component';
@@ -17,7 +16,7 @@ const routes: Routes =[
       },
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
       },
       {
         path: 'favoritos',
@@ -25,7 +24,7 @@ const routes: Routes =[
       },
       {
         path: '**',
-        redirectTo: 'listado'
+        component: HomeComponent
       }
     ]
   }

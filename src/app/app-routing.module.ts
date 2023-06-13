@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: 'autores',
     loadChildren: () => import('./autores/autores.module').then(m => m.AutoresModule),
+    
   },
   {
     path: 'auth',
@@ -15,19 +16,11 @@ const routes: Routes = [
     path: '404',
     component: ErrorPageComponent,
   },
-  {
-    path: '**',
-    redirectTo: '404'
-  }
+  
 ]
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports:[
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
